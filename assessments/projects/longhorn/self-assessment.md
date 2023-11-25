@@ -129,10 +129,12 @@ together, this document and the joint-assessment serve as a cornerstone for if a
 
 
 ## Security functions and features
+
 Critical Security Components:
 * Volume Encryption: Ensures that data at rest is encrypted, providing confidentiality and protection against unauthorised access. This is a non-configurable element critical for data security, especially when handling sensitive information.
 * Data Replication Integrity: Synchronous replication of data across multiple replicas in different nodes ensures high availability and integrity of data. This is vital for maintaining the state of the data in case of node failure.
 * Automated Snapshot Management: Regular, automatic snapshots protect against data loss by preserving the state of data at specific points in time. These snapshots form the basis for recovery in the event of corruption or data loss incidents.
+
 Security-Relevant Components:
 * Configurable Replication and Backup Settings: While the replication process itself is critical, the ability to configure the number of replicas and backup intervals allows administrators to tailor the redundancy and backup frequency to the risk profile of the data being stored.
 * Kubernetes' Role-Based Access Control (RBAC) Integration: By leveraging Kubernetes RBAC, Longhorn ensures that only authorised users and processes can manage volumes, snapshots, and backups, thus enforcing the principle of least privilege.
@@ -145,6 +147,7 @@ Security-Relevant Components:
 
 
 ## Secure development practices
+
 Development Pipeline
 * Version Control and Commit Signing: Longhorn uses Git for version control. Contributors are encouraged to sign commits to verify the identity of contributors.
 * Code Reviews: Each pull request requires a thorough review by at least two maintainers to ensure quality and security.
@@ -152,10 +155,12 @@ Development Pipeline
 * Container Image Security: Container images are built using trusted base images, and measures are taken to make images immutable and signed to prevent tampering.
 * Automated Vulnerability Checks: The project includes automated security scanning tools in the CI pipeline that regularly scan the codebase and dependencies for known vulnerabilities.
 * Static Code Analysis: Longhorn employs static code analysis tools to detect potential security issues before they are merged into the main codebase.
+  
 Communication Channels
 * Internal: The Longhorn development team uses Slack channels for real-time communication and GitHub for asynchronous communication, issue tracking, and feature planning.
 * Inbound: Users and prospective users can file issues or feature requests via GitHub Issues. Additionally, they can seek support and discuss with the community on the Longhorn Forum.
 * Outbound: Updates, announcements, and security advisories are communicated through the official Longhorn website and GitHub repository. They may also use mailing lists such as longhorn-announce@ for significant updates or security announcements.
+
 Ecosystem
 * Longhorn is designed to be an integral part of the cloud-native ecosystem, providing persistent storage solutions that are fully integrated with Kubernetes. It supports dynamic provisioning of storage, seamless scaling, and recovery features, which are critical for Kubernetes deployments.
 * It complements other CNCF projects by adhering to the principles of containerisation, orchestration, micro-services, and immutable infrastructure.
@@ -163,13 +168,16 @@ Ecosystem
 
 
 ## Security issue resolution
+
 Responsible Disclosures Process
 * Longhorn adopts a responsible disclosure policy, where external and internal parties are encouraged to report suspected security vulnerabilities through a predefined process.
 * Strategy: Upon receiving a report, the team acknowledges receipt, conducts a confidential investigation, and works on a fix in a private repository to prevent premature exposure of the vulnerability.
+
 Vulnerability Response Process
 * Responsible Team: The Longhorn security team is tasked with responding to security reports. This team includes maintainers who have a deep understanding of the codebase and security practices.
 * Reporting Process: Reporters are asked to include detailed information about the issue, steps to reproduce, and any other relevant data.
 * Response Actions: The team assesses the report for validity, determines the severity, develops a fix, and then coordinates a release timeline for the patch. They also communicate with the reporter throughout the process, providing updates and seeking additional information if necessary.
+
 Incident Response
 * Triage: Security incidents are prioritised based on severity, impact, and complexity. The team rapidly assesses the scope to understand the breadth of the impact.
 * Confirmation: The team confirms the incident and identifies affected systems and data.
@@ -183,11 +191,14 @@ Known Issues Over Time
 * Longhorn tracks all issues publicly on their [GitHub issues page](https://github.com/longhorn/longhorn/issues). Any security vulnerabilities discovered in the past are documented there along with their resolutions.
 * The project maintains a [security advisory](https://github.com/longhorn/longhorn/security/advisories) page where they publish details about the security vulnerabilities found.
 * Statistics on vulnerabilities found and fixed are not explicitly listed unless provided on the project’s repository or documentation. If available, data about the effectiveness of code reviews and automated testing in catching issues would be included.
+
 CII Best Practices
 * Longhorn is actively working towards meeting the CII Best Practices criteria.
 * Longhorn’s commitment to security can be observed in their adherence to these practices, such as using automated testing, code review, and maintaining a public version control repository.
+
 Case Studies
 * Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability. While specific case studies are not listed here, they would typically cover scenarios such as disaster recovery, handling high-volume traffic, and data migration in multi-cluster Kubernetes environments.
+
 Related Projects / Vendors
 * Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as Rook, OpenEBS, and Portworx. Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
 
