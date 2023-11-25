@@ -36,7 +36,7 @@ A table at the top for quick reference information, later used for indexing.
 
 |   |  |
 | -- | -- |
-| Software | A link to the software’s repository.  |
+| Software | [A link to the Longhorn’s repository.](https://github.com/longhorn/longhorn) |
 | Security Provider | No |
 | Languages | Python, Shell, Mustache |
 | SBOM | https://longhorn.io/docs/1.5.3/deploy/install/ |
