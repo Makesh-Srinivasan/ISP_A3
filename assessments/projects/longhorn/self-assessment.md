@@ -181,13 +181,14 @@ Incident Response
 
 ## Appendix
 Known Issues Over Time
-* Longhorn tracks all issues publicly on their GitHub issues page. Any security vulnerabilities discovered in the past are documented there along with their resolutions.
-* The project maintains a security advisory page where they publish details about the security vulnerabilities found.
+* Longhorn tracks all issues publicly on their [GitHub issues page](https://github.com/longhorn/longhorn/issues). Any security vulnerabilities discovered in the past are documented there along with their resolutions.
+* The project maintains a [security advisory](https://github.com/longhorn/longhorn/security/advisories) page where they publish details about the security vulnerabilities found.
 * Statistics on vulnerabilities found and fixed are not explicitly listed unless provided on the project’s repository or documentation. If available, data about the effectiveness of code reviews and automated testing in catching issues would be included.
 CII Best Practices
-* Longhorn is actively working towards meeting the CII Best Practices criteria. The current status and progress can be tracked on the CII Best Practices badge page.
+* Longhorn is actively working towards meeting the CII Best Practices criteria.
 * Longhorn’s commitment to security can be observed in their adherence to these practices, such as using automated testing, code review, and maintaining a public version control repository.
 Case Studies
 * Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability. While specific case studies are not listed here, they would typically cover scenarios such as disaster recovery, handling high-volume traffic, and data migration in multi-cluster Kubernetes environments.
 Related Projects / Vendors
 * Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as Rook, OpenEBS, and Portworx. Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
+
