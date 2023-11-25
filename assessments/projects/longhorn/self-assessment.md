@@ -129,6 +129,9 @@ to assist in a joint-assessment, necessary for projects under incubation.  Taken
 together, this document and the joint-assessment serve as a cornerstone for if and when
 [project] seeks graduation and is preparing for a security audit.
 
+Light Weight Threat Modelling:
+This [document](https://github.com/Rana-KV/tag-security/issues/27#issuecomment-1826412654) serves to inform Longhorn users and contributors about its security practices, as well as to assist CNCF TAG-Security in their joint assessment for incubation phase projects.
+
 
 ## Security functions and features
 
