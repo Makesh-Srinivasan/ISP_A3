@@ -165,7 +165,6 @@ Ecosystem
 ## Security issue resolution
 Responsible Disclosures Process
 * Longhorn adopts a responsible disclosure policy, where external and internal parties are encouraged to report suspected security vulnerabilities through a predefined process.
-* Communication Methods: Security issues are to be reported via a secure channel, typically an email dedicated to security concerns, such as security@longhorn.io, which is managed by the project's security team.
 * Strategy: Upon receiving a report, the team acknowledges receipt, conducts a confidential investigation, and works on a fix in a private repository to prevent premature exposure of the vulnerability.
 Vulnerability Response Process
 * Responsible Team: The Longhorn security team is tasked with responding to security reports. This team includes maintainers who have a deep understanding of the codebase and security practices.
