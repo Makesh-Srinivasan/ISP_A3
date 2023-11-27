@@ -60,7 +60,7 @@ Longhorn is a cloud-native, distributed block storage system for Kubernetes. It 
 Longhorn is a cloud-native distributed block storage system designed to run on Kubernetes. It is particularly engineered to provide persistent storage for stateful applications running in Kubernetes clusters. In cloud-native architectures, persistence, resilience, and scalability are critical challenges due to the ephemeral nature of containerised workloads. Longhorn addresses these challenges by turning distributed block storage into a micro-service, managed by Kubernetes, making it highly available and resilient.
 
 
-<p align="center"><img alt="image" src="https://github.com/Makesh-Srinivasan/ISP_A3/assets/66047630/8e9e94c2-b507-474e-8bd1-7773a62344e7"></p>
+<p align="center"><img width="560" alt="image" src="https://github.com/Makesh-Srinivasan/ISP_A3/assets/66047630/8e9e94c2-b507-474e-8bd1-7773a62344e7"></p>
 
 
 * Pods and Volumes: Longhorn integrates with Kubernetes through volumes presented to pods. These volumes are dynamically provisioned by Longhorn as per the demands of the pods, which could be running various workloads such as databases, CMS, or any stateful application.
@@ -119,7 +119,7 @@ Light Weight Threat Modelling:
 This [document](https://github.com/Rana-KV/tag-security/issues/27#issuecomment-1826412654) serves to inform Longhorn users and contributors about its security practices, as well as to assist CNCF TAG-Security in their joint assessment for incubation phase projects.
 
 The attact tree for a generic high-level threat scenario is depicted:
-<p align="center"><img width="540" alt="image" src="https://github.com/Makesh-Srinivasan/ISP_A3/assets/66047630/4f88f24c-14e9-40c1-92e5-ea3761806556"></p>
+<p align="center"><img alt="image" src="https://github.com/Makesh-Srinivasan/ISP_A3/assets/66047630/4f88f24c-14e9-40c1-92e5-ea3761806556"></p>
 
 Each branch of this tree represents a step or method an attacker might use to progress their attack. The end goal is unauthorized access to and exfiltration of sensitive data stored within Longhorn. This attack tree can be used to identify potential vulnerabilities, assess risks, and develop strategies to mitigate or prevent such attacks.
 
