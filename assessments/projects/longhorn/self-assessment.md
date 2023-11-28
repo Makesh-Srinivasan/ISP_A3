@@ -1,7 +1,7 @@
 
 
 # Self-assessment
-This is the Longhorn's Self-assessment to begin thinking about the security of the project, determining gaps in its security, and preparing any security documentation for its users. This document is ideal for projects currently in the CNCF **sandbox** as well as projects that are looking to receive a joint assessment and currently in CNCF **incubation**.
+This is the Longhorn's Self-assessment documentation that we wrote after we began thinking about the security of the project, determining gaps in its security, and preparing security documentation for Langhorn's users. This project is currently in the CNCF Incubation phase preparing for Graduation.
 
 # Self-assessment outline
 
