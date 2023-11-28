@@ -55,19 +55,19 @@ Longhorn is a cloud-native distributed block storage system designed to run on K
 <p align="center"><img width="600" alt="image" src="https://github.com/Makesh-Srinivasan/ISP_A3/assets/66047630/8e9e94c2-b507-474e-8bd1-7773a62344e7"></p>
 
 
-* Pods and Volumes: Longhorn integrates with Kubernetes through volumes presented to pods. These volumes are dynamically provisioned by Longhorn as per the demands of the pods, which could be running various workloads such as databases, CMS, or any stateful application.
-* Longhorn Engine: Each volume is managed by a dedicated Longhorn Engine, which is responsible for replicating and synchronising data across multiple nodes in the cluster. This dedicated engine approach ensures that the failure of one volume does not impact the function of others.
-* Replicas: The data for each volume is replicated across multiple replicas spread over different nodes, as shown in the image. This design enhances data protection and availability. If one node fails, the data is still accessible from other replicas.
-* Nodes and Disks: Longhorn is designed to work with the underlying infrastructure such as in SSDs. As depicted, Longhorn can manage multiple disks across nodes, optimising the utilisation of available storage resources within the cluster.
-* Data Flow: The image illustrates how read and write operations are conducted across the system. Data written to a Kubernetes volume is managed by the Longhorn Engine and then replicated to the replicas. These replicas handle the actual storage of data on the physical disks. This multi-layered approach allows for a flexible and resilient system that can withstand various failure scenarios.
+* `Pods and Volumes`: Longhorn integrates with Kubernetes through volumes presented to pods. These volumes are dynamically provisioned by Longhorn as per the demands of the pods, which could be running various workloads such as databases, CMS, or any stateful application.
+* `Longhorn Engine`: Each volume is managed by a dedicated Longhorn Engine, which is responsible for replicating and synchronising data across multiple nodes in the cluster. This dedicated engine approach ensures that the failure of one volume does not impact the function of others.
+* `Replicas`: The data for each volume is replicated across multiple replicas spread over different nodes, as shown in the image. This design enhances data protection and availability. If one node fails, the data is still accessible from other replicas.
+* `Nodes and Disks`: Longhorn is designed to work with the underlying infrastructure such as in SSDs. As depicted, Longhorn can manage multiple disks across nodes, optimising the utilisation of available storage resources within the cluster.
+* `Data Flow`: The image illustrates how read and write operations are conducted across the system. Data written to a Kubernetes volume is managed by the Longhorn Engine and then replicated to the replicas. These replicas handle the actual storage of data on the physical disks. This multi-layered approach allows for a flexible and resilient system that can withstand various failure scenarios.
 
 Longhorn's placement within the cloud-native ecosystem is characterised by its focus on simplicity, reliability, and ease of use. It provides a user-friendly interface, automated volume and snapshot management, backup and restore capabilities, and disaster recovery solutions, all of which are crucial for managing stateful applications in a Kubernetes environment.
 
 
 ### Actors
 * `Longhorn Manager`: Manages API calls, volume creation, and overall orchestration within Kubernetes. It communicates with the Kubernetes API server and orchestrates the Longhorn Engine and replicas.
-* Longhorn Engine: A storage controller responsible for synchronously replicating volumes across multiple nodes. It runs on the same node as the pod using the Longhorn volume, thereby isolating the replication process to specific nodes and limiting lateral movement in case of a compromise.
-* Users/Administrators: Interact with Longhorn through Kubernetes or the Longhorn UI. This actor is distinct in terms of access control and permissions, which are essential for maintaining the security and integrity of the system.
+* `Longhorn Engine`: A storage controller responsible for synchronously replicating volumes across multiple nodes. It runs on the same node as the pod using the Longhorn volume, thereby isolating the replication process to specific nodes and limiting lateral movement in case of a compromise.
+* `Users/Administrators`: Interact with Longhorn through Kubernetes or the Longhorn UI. This actor is distinct in terms of access control and permissions, which are essential for maintaining the security and integrity of the system.
 
 
 ### Actions
@@ -90,19 +90,19 @@ Longhorn's placement within the cloud-native ecosystem is characterised by its f
 
 
 ### Goals
-* Data Security and Integrity: Ensuring that data stored and managed by Longhorn is protected from unauthorised access and corruption. This includes securing data at rest (via encryption if configured) and in transit across the network.
-* Resilience and Availability: Longhorn is designed to maintain high availability and data durability across Kubernetes clusters. This involves replicating data across multiple nodes and ensuring that the failure of a single component does not lead to data loss.
-* Secure Data Operations: Providing secure mechanisms for creating, managing, and restoring volumes, with robust authentication and authorisation checks to ensure that only authorised users and systems can perform these operations.
-* Disaster Recovery: Offering secure and reliable disaster recovery solutions, enabling quick and consistent data recovery in case of catastrophic events, thereby safeguarding against data loss.
-* Compliance with Kubernetes Security Standards: Ensuring that Longhorn's architecture and operations adhere to Kubernetes security best practices, including integration with Kubernetes' Role-Based Access Control (RBAC) for managing access to its resources.
+* `Data Security and Integrity`: Ensuring that data stored and managed by Longhorn is protected from unauthorised access and corruption. This includes securing data at rest (via encryption if configured) and in transit across the network.
+* `Resilience and Availability`: Longhorn is designed to maintain high availability and data durability across Kubernetes clusters. This involves replicating data across multiple nodes and ensuring that the failure of a single component does not lead to data loss.
+* `Secure Data Operations`: Providing secure mechanisms for creating, managing, and restoring volumes, with robust authentication and authorisation checks to ensure that only authorised users and systems can perform these operations.
+* `Disaster Recovery`: Offering secure and reliable disaster recovery solutions, enabling quick and consistent data recovery in case of catastrophic events, thereby safeguarding against data loss.
+* `Compliance with Kubernetes Security Standards`: Ensuring that Longhorn's architecture and operations adhere to Kubernetes security best practices, including integration with Kubernetes' Role-Based Access Control (RBAC) for managing access to its resources.
 
 
 ### Non-goals
-* Primary Database Services: Longhorn is not intended to serve as a primary database or a data processing system. It is a block storage system for Kubernetes and does not handle database management functions.
-* Data Analytics and Processing: Longhorn is not designed for direct involvement in data analytics or processing tasks. Its role is confined to the storage and retrieval of data for such operations, not processing or analysing the data itself.
-* Limitless Data Storage: While Longhorn facilitates data storage, it is not designed to support unlimited data storage or handle scenarios where the volume of data could potentially overwhelm the storage capacity or incur excessive costs.
-* Network Infrastructure Management: Longhorn's scope does not include the management or configuration of underlying network infrastructure. It focuses on the storage aspect within the given network environment.
-* Comprehensive Data Security: While Longhorn implements measures to secure data, it does not offer a complete data security solution. Users are responsible for implementing additional security measures according to their specific requirements, such as network security or end-to-end encryption of sensitive data.
+* `Primary Database Services`: Longhorn is not intended to serve as a primary database or a data processing system. It is a block storage system for Kubernetes and does not handle database management functions.
+* `Data Analytics and Processing`: Longhorn is not designed for direct involvement in data analytics or processing tasks. Its role is confined to the storage and retrieval of data for such operations, not processing or analysing the data itself.
+* `Limitless Data Storage`: While Longhorn facilitates data storage, it is not designed to support unlimited data storage or handle scenarios where the volume of data could potentially overwhelm the storage capacity or incur excessive costs.
+* `Network Infrastructure Management`: Longhorn's scope does not include the management or configuration of underlying network infrastructure. It focuses on the storage aspect within the given network environment.
+* `Comprehensive Data Security`: While Longhorn implements measures to secure data, it does not offer a complete data security solution. Users are responsible for implementing additional security measures according to their specific requirements, such as network security or end-to-end encryption of sensitive data.
 
 
 ## Self-assessment use
@@ -336,15 +336,15 @@ Each branch of this tree represents a step or method an attacker might use to pr
 ## Security functions and features
 
 Critical Security Components:
-* Volume Encryption: Ensures that data at rest is encrypted, providing confidentiality and protection against unauthorised access. This is a non-configurable element critical for data security, especially when handling sensitive information.
-* Data Replication Integrity: Synchronous replication of data across multiple replicas in different nodes ensures high availability and integrity of data. This is vital for maintaining the state of the data in case of node failure.
-* Automated Snapshot Management: Regular, automatic snapshots protect against data loss by preserving the state of data at specific points in time. These snapshots form the basis for recovery in the event of corruption or data loss incidents.
+* `Volume Encryption`: Ensures that data at rest is encrypted, providing confidentiality and protection against unauthorised access. This is a non-configurable element critical for data security, especially when handling sensitive information.
+* `Data Replication Integrity`: Synchronous replication of data across multiple replicas in different nodes ensures high availability and integrity of data. This is vital for maintaining the state of the data in case of node failure.
+* `Automated Snapshot Management`: Regular, automatic snapshots protect against data loss by preserving the state of data at specific points in time. These snapshots form the basis for recovery in the event of corruption or data loss incidents.
 
 Security-Relevant Components:
-* Configurable Replication and Backup Settings: While the replication process itself is critical, the ability to configure the number of replicas and backup intervals allows administrators to tailor the redundancy and backup frequency to the risk profile of the data being stored.
-* Kubernetes' Role-Based Access Control (RBAC) Integration: By leveraging Kubernetes RBAC, Longhorn ensures that only authorised users and processes can manage volumes, snapshots, and backups, thus enforcing the principle of least privilege.
-* Health Checks and Monitoring: Longhorn's continuous health checks and monitoring of volumes and replicas are crucial for early detection of potential issues, allowing for proactive remediation before they escalate into security incidents.
-* Backup Data Validation: Before restoring data from backups, Longhorn validates the backup integrity, ensuring that the data has not been tampered with or corrupted, which is essential for the reliability of the restoration process.
+* `Configurable Replication and Backup Settings`: While the replication process itself is critical, the ability to configure the number of replicas and backup intervals allows administrators to tailor the redundancy and backup frequency to the risk profile of the data being stored.
+* `Kubernetes' Role-Based Access Control (RBAC) Integration`: By leveraging Kubernetes RBAC, Longhorn ensures that only authorised users and processes can manage volumes, snapshots, and backups, thus enforcing the principle of least privilege.
+* `Health Checks and Monitoring`: Longhorn's continuous health checks and monitoring of volumes and replicas are crucial for early detection of potential issues, allowing for proactive remediation before they escalate into security incidents.
+* `Backup Data Validation`: Before restoring data from backups, Longhorn validates the backup integrity, ensuring that the data has not been tampered with or corrupted, which is essential for the reliability of the restoration process.
 
 
 ## Project compliance
