@@ -111,7 +111,7 @@ Light Weight Threat Modelling:
 This section serves to inform Longhorn users and contributors about its security practices, as well as to assist CNCF TAG-Security in their joint assessment for incubation phase projects. Firstly, we explore the threats using the STRIDE model. Then, we explore using the lightweight threat modelling. These steps were helpful in creating the subsequent sections in our assessment.
 
 <hr>
-<center><b>STRIDE Threat Model for Longhorn</b></center>
+<p><center><b>STRIDE Threat Model for Longhorn</b></center></p>
 
 #### 1. Introduction
 This document provides a STRIDE-based threat model analysis for Longhorn, a cloud-native distributed block storage system designed for Kubernetes. The purpose is to identify potential security threats and suggest measures to mitigate them.
@@ -201,7 +201,7 @@ This STRIDE threat model for Longhorn identifies key areas of potential security
 
 <hr>
 
-<center><b>Longhorn Lightweight Threat Model</b></center>
+<p><center><b>Longhorn Lightweight Threat Model</b></center></p>
 
 #### Overview
 
@@ -280,7 +280,7 @@ Longhorn operates as a persistent volume provider for Kubernetes, managing the s
 - **Data**: Code and dependencies.
 - **Threats**: Introduction of vulnerabilities.
 
-### Threat Scenarios
+#### Threat Scenarios
 
 ##### An External Attacker without access
 - **Threats**: Probing for vulnerabilities in exposed interfaces, performing DDoS attacks.
@@ -298,7 +298,7 @@ Longhorn operates as a persistent volume provider for Kubernetes, managing the s
 - **Threats**: Introducing backdoors or vulnerabilities.
 - **Controls**: Code review processes, restricted merge privileges, and signed commits.
 
-##### Potential Controls Summary
+#### Potential Controls Summary
 
 | Threat                         | Description                                  | Controls                                                               | References  |
 |--------------------------------|----------------------------------------------|------------------------------------------------------------------------|-------------|
@@ -313,14 +313,14 @@ Longhorn operates as a persistent volume provider for Kubernetes, managing the s
 | Audit and Logging              | Lack of incident visibility or forensics     | Enable detailed logging, integrate with monitoring tools               | [Kubernetes Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/) |
 
 
-#### Recommendations
+##### Recommendations
 
 - Regularly update and patch Longhorn and Kubernetes components.
 - Ensure that all communication is encrypted, both in transit and at rest.
 - Conduct periodic access reviews and privilege audits.
 
 
-#### Conclusion
+##### Conclusion
 
 - Critical findings should be promptly disclosed to the community.
 - Consideration for additional threat modelling tools, such as attack trees or matrices, to further analyse complex threats.
