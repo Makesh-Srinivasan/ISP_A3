@@ -110,6 +110,12 @@ Longhorn's placement within the cloud-native ecosystem is characterised by its f
 Light Weight Threat Modelling:
 This section serves to inform Longhorn users and contributors about its security practices, as well as to assist CNCF TAG-Security in their joint assessment for incubation phase projects. Firstly, we explore the threats using the STRIDE model. Then, we explore using the lightweight threat modelling. These steps were helpful in creating the subsequent sections in our assessment.
 
+<div style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+    <h2>Special Section</h2>
+    <p>This is a specially styled section with HTML.</p>
+</div>
+
+
 <div style="background-color: #f0f0f0;">
 <hr>
 <p><center><b>STRIDE Threat Model for Longhorn</b></center></p>
