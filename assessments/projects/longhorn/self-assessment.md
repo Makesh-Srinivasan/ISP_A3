@@ -327,6 +327,7 @@ The attact tree for a generic high-level threat scenario is depicted:
 
 Each branch of this tree represents a step or method an attacker might use to progress their attack. The end goal is unauthorized access to and exfiltration of sensitive data stored within Longhorn. This attack tree can be used to identify potential vulnerabilities, assess risks, and develop strategies to mitigate or prevent such attacks.
 
+<hr>
 
 ## Security functions and features
 
