@@ -245,11 +245,6 @@ Longhorn operates as a persistent volume provider for Kubernetes, managing the s
 - **Data**: Control plane and data plane traffic.
 - **Threats**: Data interception, man-in-the-middle attacks.
 
-#### Cryptography
-- **Control**: Optional volume encryption at rest, TLS for data in transit.
-- **Data**: All stored and replicated data.
-- **Threats**: Unauthorised data access and tampering.
-
 #### Multi-tenancy Isolation
 - **Control**: Kubernetes namespaces and RBAC.
 - **Data**: Volume provisioning and management operations.
