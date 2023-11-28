@@ -110,6 +110,7 @@ Longhorn's placement within the cloud-native ecosystem is characterised by its f
 Light Weight Threat Modelling:
 This section serves to inform Longhorn users and contributors about its security practices, as well as to assist CNCF TAG-Security in their joint assessment for incubation phase projects. Firstly, we explore the threats using the STRIDE model. Then, we explore using the lightweight threat modelling. These steps were helpful in creating the subsequent sections in our assessment.
 
+<div style="background-color: #f0f0f0;">
 <hr>
 <p><center><b>STRIDE Threat Model for Longhorn</b></center></p>
 
@@ -200,131 +201,7 @@ Longhorn offers cloud-native, distributed block storage capabilities, integratin
 This STRIDE threat model for Longhorn identifies key areas of potential security risks and provides a foundation for implementing effective security measures. Regular updates, vigilant monitoring, and adherence to security best practices are essential to maintain the security and integrity of the Longhorn system.
 
 <hr>
-
-<p><center><b>Longhorn Lightweight Threat Model</b></center></p>
-
-#### Overview
-
-Project: Longhorn (https://github.com/longhorn/longhorn)
-Intended usage: Cloud-native distributed block storage system for Kubernetes.
-Project data classification: Sensitive
-Highest risk impact: Cluster breach, pod breach
-Owner(s) and/or maintainer(s):
-- Sheng Yang, <sheng@yasker.org>, @yasker
-- Shuo Wu, <shuo.wu@suse.com>, @shuo-wu
-- David Ko, <dko@suse.com>, @innobead
-- Derek Su, <derek.su@suse.com>, @derekbit
-- Phan Le, <phan.le@suse.com>, @PhanLe1010
-
-
-#### Threat Modelling Notes
-
-Longhorn operates as a persistent volume provider for Kubernetes, managing the storage lifecycle, replication, and backup of data across a distributed environment. The system's architecture, as visualised in the provided image, depicts data flow between Kubernetes pods, the Longhorn Engine, and storage replicas across different nodes, using secure communication protocols and access controls.
-
-#### Data Dictionary
-
-- **Volume Data**
-  - Classification/Sensitivity: High
-  - Comments: Contains user and application data, potentially including secrets.
-- **Replica Data**
-  - Classification/Sensitivity: High
-  - Comments: Replicated data across nodes for high availability.
-- **Snapshot and Backup Data**
-  - Classification/Sensitivity: High
-  - Comments: Stored both locally and externally (e.g., S3/NFS), contains historical data states.
-
-#### Control Families
-
-##### Deployment Architecture
-- **Control**: Managed through Kubernetes with defined storage classes and volume claims.
-- **Data**: Persistent volume data.
-- **Threats**: Misconfiguration leading to unauthorised access.
-
-##### Networking
-- **Control**: Internal Kubernetes networking with CNI, optional TLS encryption for external communication.
-- **Data**: Control plane and data plane traffic.
-- **Threats**: Data interception, man-in-the-middle attacks.
-
-##### Cryptography
-- **Control**: Optional volume encryption at rest, TLS for data in transit.
-- **Data**: All stored and replicated data.
-- **Threats**: Unauthorised data access and tampering.
-
-##### Multi-tenancy Isolation
-- **Control**: Kubernetes namespaces and RBAC.
-- **Data**: Volume provisioning and management operations.
-- **Threats**: Cross-tenant access or attacks.
-
-##### Secrets Management
-- **Control**: Integration with Kubernetes Secrets for sensitive information management.
-- **Data**: Encryption keys, credentials.
-- **Threats**: Exposure of sensitive data.
-
-##### Storage
-- **Control**: Replicas across diverse storage media (SSDs, HDDs).
-- **Data**: User and system data.
-- **Threats**: Data loss or corruption.
-
-##### Authentication and Authorisation
-- **Control**: Kubernetes RBAC and Service Accounts.
-- **Data**: API requests and responses.
-- **Threats**: Unauthorised actions within the storage system.
-
-##### Audit and logging
-- **Control**: Kubernetes-native logging, Longhorn UI logs.
-- **Data**: Operational logs.
-- **Threats**: Lack of visibility or forensics in case of an incident.
-
-##### Security Tests
-- **Control**: Automated security scanning in CI/CD pipelines.
-- **Data**: Code and dependencies.
-- **Threats**: Introduction of vulnerabilities.
-
-#### Threat Scenarios
-
-##### An External Attacker without access
-- **Threats**: Probing for vulnerabilities in exposed interfaces, performing DDoS attacks.
-- **Controls**: Firewall rules, rate limiting, and robust authentication mechanisms.
-
-##### An External Attacker with valid access
-- **Threats**: Abuse of valid credentials to perform malicious actions.
-- **Controls**: Strict RBAC policies, anomaly detection for unusual activities.
-
-##### An Internal Attacker with access to the hosting environment
-- **Threats**: Insider threats with access to the cluster might misuse their privileges.
-- **Controls**: Audit logging, regular access reviews, and principle of least privilege.
-
-##### A Malicious Internal User
-- **Threats**: Introducing backdoors or vulnerabilities.
-- **Controls**: Code review processes, restricted merge privileges, and signed commits.
-
-#### Potential Controls Summary
-
-| Threat                         | Description                                  | Controls                                                               | References  |
-|--------------------------------|----------------------------------------------|------------------------------------------------------------------------|-------------|
-| Deployment Architecture        | Misconfigurations leading to data breaches   | Use secure defaults in storage classes, enforce pod security policies   | [Kubernetes Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) |
-| Networking                     | Data interception or manipulation           | Implement network policies, use encrypted communication (TLS)           | [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) |
-| Cryptography                   | Unauthorized data access and tampering       | Enable volume encryption, TLS for data in transit                       | [Encrypting Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) |
-| Multi-tenancy Isolation        | Cross-tenant access or attacks               | Namespace isolation, fine-grained RBAC                                 | [Kubernetes Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) |
-| Secrets Management             | Exposure of sensitive data                   | Use Kubernetes Secrets with appropriate access controls                | [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) |
-| Storage                        | Data loss or corruption                      | Replication across nodes, regular snapshots, and backups               | [Longhorn Documentation](https://longhorn.io/docs/) |
-| Authentication                 | Unauthorized system access                   | Strong authentication mechanisms, integration with Kubernetes auth      | [Kubernetes Authentication](https://kubernetes.io/docs/reference/access-authn-authz/authentication/) |
-| Authorization (Access Control) | Unauthorized actions within the storage system| Strict RBAC policies, least privilege access                           | [Kubernetes Authorization](https://kubernetes.io/docs/reference/access-authn-authz/authorization/) |
-| Audit and Logging              | Lack of incident visibility or forensics     | Enable detailed logging, integrate with monitoring tools               | [Kubernetes Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/) |
-
-
-##### Recommendations
-
-- Regularly update and patch Longhorn and Kubernetes components.
-- Ensure that all communication is encrypted, both in transit and at rest.
-- Conduct periodic access reviews and privilege audits.
-
-
-##### Conclusion
-
-- Critical findings should be promptly disclosed to the community.
-- Consideration for additional threat modelling tools, such as attack trees or matrices, to further analyse complex threats.
-<hr>
+</div>
 
 The attact tree for a generic high-level threat scenario is depicted:
 <p align="center"><img alt="image" src="https://github.com/Makesh-Srinivasan/ISP_A3/assets/66047630/4f88f24c-14e9-40c1-92e5-ea3761806556"></p>
