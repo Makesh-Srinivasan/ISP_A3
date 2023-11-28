@@ -109,9 +109,9 @@ Longhorn's placement within the cloud-native ecosystem is characterised by its f
 
 This section serves to inform Longhorn users and contributors about its security practices, as well as to assist CNCF TAG-Security in their joint assessment for incubation phase projects. Firstly, we explore the threats using the STRIDE model. Then, we explore using the lightweight threat modelling. Finally, we see an example attack tree. These steps were helpful in creating the subsequent sections in our assessment.
 
-<hr>
+<details>
 
-## STRIDE Threat Model for Longhorn
+<summary>STRIDE Threat Model for Longhorn</summary>
 
 ### 1. Introduction
 This document provides a STRIDE-based threat model analysis for Longhorn, a cloud-native distributed block storage system designed for Kubernetes. The purpose is to identify potential security threats and suggest measures to mitigate them.
@@ -199,9 +199,13 @@ Longhorn offers cloud-native, distributed block storage capabilities, integratin
 ### 4. Conclusion
 This STRIDE threat model for Longhorn identifies key areas of potential security risks and provides a foundation for implementing effective security measures. Regular updates, vigilant monitoring, and adherence to security best practices are essential to maintain the security and integrity of the Longhorn system.
 
-<hr>
+</details>
 
-## Longhorn Lightweight Threat Model
+
+
+<details>
+ 
+<summary>Longhorn Lightweight Threat Model</summary>
 
 ### Overview
 
@@ -319,7 +323,7 @@ Longhorn operates as a persistent volume provider for Kubernetes, managing the s
 
 - Critical findings should be promptly disclosed to the community.
 - Consideration for additional threat modelling tools, such as attack trees or matrices, to further analyse complex threats.
-<hr>
+</details>
 
 The attact tree for a generic high-level threat scenario is depicted:
 
