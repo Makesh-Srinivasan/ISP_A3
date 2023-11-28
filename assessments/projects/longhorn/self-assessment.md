@@ -1,15 +1,7 @@
 
 
 # Self-assessment
-The Self-assessment is the initial document for projects to begin thinking about the
-security of the project, determining gaps in their security, and preparing any security
-documentation for their users. This document is ideal for projects currently in the
-CNCF **sandbox** as well as projects that are looking to receive a joint assessment and
-currently in CNCF **incubation**.
-
-For a detailed guide with step-by-step discussion and examples, check out the free 
-Express Learning course provided by Linux Foundation Training & Certification: 
-[Security Assessments for Open Source Projects](https://training.linuxfoundation.org/express-learning/security-self-assessments-for-open-source-projects-lfel1005/).
+This is the Longhorn's Self-assessment to begin thinking about the security of the project, determining gaps in its security, and preparing any security documentation for its users. This document is ideal for projects currently in the CNCF **sandbox** as well as projects that are looking to receive a joint assessment and currently in CNCF **incubation**.
 
 # Self-assessment outline
 
@@ -193,8 +185,12 @@ CII Best Practices
 * Longhorn’s commitment to security can be observed in their adherence to these practices, such as using automated testing, code review, and maintaining a public version control repository.
 
 Case Studies
-* Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability. While specific case studies are not listed here, they would typically cover scenarios such as disaster recovery, handling high-volume traffic, and data migration in multi-cluster Kubernetes environments.
+* Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability.
+* Companies from different fields such as technology, finance, business services, or more that utilize the Kubernetes cluster tend to use it for secure, provision, and backup storage and more.
+* Further information can be found here: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn).
 
 Related Projects / Vendors
-* Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as Rook, OpenEBS, and Portworx. Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
+* Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as Rook, OpenEBS, and Portworx.
+* Especially Rook is often the most compared with Longhorn since both are Kubernetes-native. Rook is an open-source cloud-native storage utility for Kubernetes that aims to automate some of the tasks of a storage administrator, such as programmatic storage, migration, disaster recovery, monitoring, and resource management. Longhorn is valued to be easier to work on from scratch, but Rook is preferred when dealing with larger clusters in PRD.
+* Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
 
