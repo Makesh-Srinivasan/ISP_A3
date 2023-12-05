@@ -402,39 +402,38 @@ Incident Response
 
 
 ## Appendix
-Known Issues Over Time
+
+### Known Issues Over Time
 * Longhorn tracks all issues publicly on their [GitHub issues page](https://github.com/longhorn/longhorn/issues). Any security vulnerabilities discovered in the past are documented there along with their resolutions.
 * The project maintains a [security advisory](https://github.com/longhorn/longhorn/security/advisories) page where they publish details about the security vulnerabilities found.
 * Statistics on vulnerabilities found and fixed are not explicitly listed unless provided on the project’s repository or documentation. If available, data about the effectiveness of code reviews and automated testing in catching issues would be included.
+* For a detailed history of known issues, visit: [Known Issues Over Time](https://longhorn.io/blog/cve-2021-36779-36780/).
 
-CII Best Practices
+### CII Best Practices
 * Longhorn is actively working towards meeting the CII Best Practices criteria.
 * Longhorn’s commitment to security can be observed in their adherence to these practices, such as using automated testing, code review, and maintaining a public version control repository.
+* More details can be found here: [CII Best Practices](https://longhorn.io/docs/1.5.3/best-practices/).
 
-Case Studies
+### Case Studies
 * Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability.
 * Companies from different fields such as technology, finance, business services, or more that utilize the Kubernetes cluster tend to use it for secure, provision, and backup storage and more.
-* Further information can be found here: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn). Some are listed here:
+* Further information can be found here: [Case studies](https://www.cncf.io/case-studies/). Some companies using Longhorn include:
   - [JT4 LLC](https://www.jt4llc.com)
   - [DgPays](https://dgpays.com/en.html)
   - [Amdocs](http://amdocs.com/)
 
-
-Related Projects / Vendors
+### Related Projects / Vendors
 * Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as [Rook](https://github.com/rook/rook) and [OpenEBS](https://github.com/openebs/openebs).
 * Especially Rook is often the most compared with Longhorn since both are Kubernetes-native. Rook is an open-source cloud-native storage utility for Kubernetes that aims to automate some of the tasks of a storage administrator, such as programmatic storage, migration, disaster recovery, monitoring, and resource management. Longhorn is valued to be easier to work on from scratch, but Rook is preferred when dealing with larger clusters in PRD.
 * Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
+* For more on related projects and vendors, see: [Related Projects / Vendors](https://www.cncf.io/projects/longhorn/).
 
 
 ## Action Items
 * We are currently in communication with the Longhorn project maintainers to seek their insights on the self-assessment document. We have identified certain areas where information was not available, and are awaiting their response to clarify these points. We have briefed our manager on the focus and purpose of our inquiry, and he is presently reviewing our work.
-* Active participation in Longhorn’s community forums to present your assessment and solicit feedback. We will continue to utilise Longhorn's community channels (like [Slack](https://slack.cncf.io/) [channels](https://cloud-native.slack.com/messages/longhorn) or forums) to engage in discussions, ensuring a broader reach and diverse perspectives.
-* Additionally, we have reached out to the maintainers for details regarding the Software Bill of Materials (SBOM) for Longhorn, as our searches did not yield this information. This action was taken following Mr. Pranava, the TA, recommendation that our documentation needs to include the updated SBOM. However, we have included a SBOM that we generated using FOSSA.
+* Additionally, we have reached out to the maintainers for details regarding the Software Bill of Materials (SBOM) for Longhorn, as our searches did not yield this information. This action was taken following Mr. Pranava, the TA, recommendation that our documentation needs to include the updated SBOM.
 * We have posed several critical questions to the maintainers to enhance our understanding of Longhorn's security architecture:
   - How does Longhorn maintain data integrity during cross-node replication, especially in environments with high network latency?
   - What safeguards are in place to prevent unauthorized access to Longhorn’s management interface or API?
   - Are there any future plans to implement more robust audit and logging capabilities for tracking vital operations in Longhorn?
-  - Backup and Disaster Recovery: While Longhorn provides backup capabilities, the security and integrity of these backups are critical, especially against ransomware attacks or data corruption. How do you handle this scenario?
-  - Longhorn’s security also depends on the third-party libraries and dependencies it uses. Vulnerabilities in these components can pose a risk. How is it decided that a library would be used and adopted into Longhorn's release versus a more safer approach of waiting for longer time to ensure that the library becomes more secure to be adopted into production.
-<br>
-Based on the answers we receive to these questions, we plan to revise our attack tree and threat model. Our goal is to make them more specific and comprehensive, incorporating additional threats if identified. Following our discussion with the maintainers, we will proceed to address any potential threats that arise. We plan to address these questions in our next iteration of the self assessment documentation.
+Based on the answers we receive to these questions, we plan to revise our attack tree and threat model. Our goal is to make them more specific and comprehensive, incorporating additional threats if identified. Following our discussion with the maintainers, we will proceed to address any potential threats that arise.
