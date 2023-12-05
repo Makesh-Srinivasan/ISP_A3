@@ -22,6 +22,7 @@ This is the Longhorn's Self-assessment documentation that we wrote after we bega
 * [Secure development practices](#secure-development-practices)
 * [Security issue resolution](#security-issue-resolution)
 * [Appendix](#appendix)
+* [Action items](#Action-Items)
 
 ## Metadata
 
@@ -32,7 +33,7 @@ A table at the top for quick reference information, later used for indexing.
 | Software | [A link to the Longhorn’s repository.](https://github.com/longhorn/longhorn) |
 | Security Provider | No |
 | Languages | Python, Shell, Mustache |
-| SBOM | https://longhorn.io/docs/1.5.3/deploy/install/ |
+| SBOM | The information is not readily available online and we have requested for the same |
 | | |
 
 ### Security links
@@ -424,3 +425,12 @@ Related Projects / Vendors
 * Especially Rook is often the most compared with Longhorn since both are Kubernetes-native. Rook is an open-source cloud-native storage utility for Kubernetes that aims to automate some of the tasks of a storage administrator, such as programmatic storage, migration, disaster recovery, monitoring, and resource management. Longhorn is valued to be easier to work on from scratch, but Rook is preferred when dealing with larger clusters in PRD.
 * Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
 
+
+## Action Items
+* We are currently in communication with the Longhorn project maintainers to seek their insights on the self-assessment document. We have identified certain areas where information was not available, and are awaiting their response to clarify these points. We have briefed our manager on the focus and purpose of our inquiry, and he is presently reviewing our work.
+* Additionally, we have reached out to the maintainers for details regarding the Software Bill of Materials (SBOM) for Longhorn, as our searches did not yield this information. This action was taken following Mr. Pranava, the TA, recommendation that our documentation needs to include the updated SBOM.
+* We have posed several critical questions to the maintainers to enhance our understanding of Longhorn's security architecture:
+  - How does Longhorn maintain data integrity during cross-node replication, especially in environments with high network latency?
+  - What safeguards are in place to prevent unauthorized access to Longhorn’s management interface or API?
+  - Are there any future plans to implement more robust audit and logging capabilities for tracking vital operations in Longhorn?
+Based on the answers we receive to these questions, we plan to revise our attack tree and threat model. Our goal is to make them more specific and comprehensive, incorporating additional threats if identified. Following our discussion with the maintainers, we will proceed to address any potential threats that arise.
