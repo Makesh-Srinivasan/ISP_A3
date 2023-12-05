@@ -406,24 +406,30 @@ Known Issues Over Time
 * Longhorn tracks all issues publicly on their [GitHub issues page](https://github.com/longhorn/longhorn/issues). Any security vulnerabilities discovered in the past are documented there along with their resolutions.
 * The project maintains a [security advisory](https://github.com/longhorn/longhorn/security/advisories) page where they publish details about the security vulnerabilities found.
 * Statistics on vulnerabilities found and fixed are not explicitly listed unless provided on the project’s repository or documentation. If available, data about the effectiveness of code reviews and automated testing in catching issues would be included.
+* For a detailed history of known issues, visit: [Known Issues Over Time](https://longhorn.io/blog/cve-2021-36779-36780/).
 
 CII Best Practices
 * Longhorn is actively working towards meeting the CII Best Practices criteria.
 * Longhorn’s commitment to security can be observed in their adherence to these practices, such as using automated testing, code review, and maintaining a public version control repository.
+* * More details can be found here: [CII Best Practices](https://longhorn.io/docs/1.5.3/best-practices/).
 
 Case Studies
 * Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability.
 * Companies from different fields such as technology, finance, business services, or more that utilize the Kubernetes cluster tend to use it for secure, provision, and backup storage and more.
-* Further information can be found here: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn). Some are listed here:
+* Further information can be found here: [Case studies](https://www.cncf.io/case-studies/).
+* Companies using Longhorn: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn). Some are listed here:
   - [JT4 LLC](https://www.jt4llc.com)
   - [DgPays](https://dgpays.com/en.html)
   - [Amdocs](http://amdocs.com/)
+
+
 
 
 Related Projects / Vendors
 * Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as [Rook](https://github.com/rook/rook) and [OpenEBS](https://github.com/openebs/openebs).
 * Especially Rook is often the most compared with Longhorn since both are Kubernetes-native. Rook is an open-source cloud-native storage utility for Kubernetes that aims to automate some of the tasks of a storage administrator, such as programmatic storage, migration, disaster recovery, monitoring, and resource management. Longhorn is valued to be easier to work on from scratch, but Rook is preferred when dealing with larger clusters in PRD.
 * Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
+* For more on related projects and vendors, see: [Related Projects / Vendors](https://www.cncf.io/projects/longhorn/).
 
 
 ## Action Items
