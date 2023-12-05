@@ -370,9 +370,10 @@ Development Pipeline
 * Static Code Analysis: Longhorn employs static code analysis tools to detect potential security issues before they are merged into the main codebase.
   
 Communication Channels
-* Internal: The Longhorn development team uses Slack channels for real-time communication and GitHub for asynchronous communication, issue tracking, and feature planning.
-* Inbound: Users and prospective users can file issues or feature requests via GitHub Issues. Additionally, they can seek support and discuss with the community on the Longhorn Forum.
-* Outbound: Updates, announcements, and security advisories are communicated through the official Longhorn website and GitHub repository. They may also use mailing lists such as longhorn-announce@ for significant updates or security announcements.
+* Internal: The Longhorn development team uses [Slack](https://slack.cncf.io/) [channels](https://cloud-native.slack.com/messages/longhorn) for real-time communication and GitHub for asynchronous communication, issue tracking, and feature planning.
+* Inbound: Users and prospective users can [file issues](https://github.com/longhorn/longhorn/issues/new/choose) or feature requests via GitHub Issues. When creating a bug issue, the support bundle can be sent to [longhorn-support-bundle](mailto:longhorn-support-bundle@suse.com). Additionally, they can seek support and discuss with the community on the [Longhorn Forum](https://cloud-native.slack.com/messages/longhorn).
+* Outbound: Updates, announcements, and security advisories are communicated through the official Longhorn website and GitHub repository. They may also use mailing lists such as longhorn-announce@ for significant updates or security announcements. Community Meeting and Office Hours are also hosted by the core maintainers of Longhorn on 4th Friday of the every month at 09:00 (CET) or 16:00 (CST) at https://community.cncf.io/longhorn-community/. The users can also stay up to date on the [latest news and events](https://lists.cncf.io/g/cncf-longhorn) or read more about the [community and its events](https://github.com/longhorn/community).
+
 
 Ecosystem
 * Longhorn is designed to be an integral part of the cloud-native ecosystem, providing persistent storage solutions that are fully integrated with Kubernetes. It supports dynamic provisioning of storage, seamless scaling, and recovery features, which are critical for Kubernetes deployments.
@@ -383,12 +384,12 @@ Ecosystem
 ## Security issue resolution
 
 Responsible Disclosures Process
-* Longhorn adopts a responsible disclosure policy, where external and internal parties are encouraged to report suspected security vulnerabilities through a predefined process.
+* Longhorn adopts a responsible disclosure policy, where external and internal parties are encouraged to report suspected security vulnerabilities through a predefined process. Longhorn provides some details on the [contributing guidelines](https://github.com/longhorn/longhorn/blob/master/CONTRIBUTING.md) and the [code of conduct](https://github.com/longhorn/longhorn/blob/master/CODE_OF_CONDUCT.md)
 * Strategy: Upon receiving a report, the team acknowledges receipt, conducts a confidential investigation, and works on a fix in a private repository to prevent premature exposure of the vulnerability.
 
 Vulnerability Response Process
-* Responsible Team: The Longhorn security team is tasked with responding to security reports. This team includes maintainers who have a deep understanding of the codebase and security practices.
-* Reporting Process: Reporters are asked to include detailed information about the issue, steps to reproduce, and any other relevant data.
+* Responsible Team: The Longhorn security team is tasked with responding to security reports. This team includes maintainers who have a deep understanding of the codebase and security practices. The vulnerabilities can then be reported to [longhorn-security](mailto:longhorn-security@suse.com).
+* Reporting Process: Reporters are asked to include detailed information about the issue, steps to reproduce, and any other relevant data. If having any vulnerabilities found, Longhorn askes it to be reported to [longhorn-security](longhorn-security).
 * Response Actions: The team assesses the report for validity, determines the severity, develops a fix, and then coordinates a release timeline for the patch. They also communicate with the reporter throughout the process, providing updates and seeking additional information if necessary.
 
 Incident Response
@@ -415,7 +416,7 @@ Case Studies
 * Further information can be found here: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn).
 
 Related Projects / Vendors
-* Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as Rook, OpenEBS, and Portworx.
+* Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as [Rook](https://github.com/rook/rook) and [OpenEBS](https://github.com/openebs/openebs).
 * Especially Rook is often the most compared with Longhorn since both are Kubernetes-native. Rook is an open-source cloud-native storage utility for Kubernetes that aims to automate some of the tasks of a storage administrator, such as programmatic storage, migration, disaster recovery, monitoring, and resource management. Longhorn is valued to be easier to work on from scratch, but Rook is preferred when dealing with larger clusters in PRD.
 * Prospective users are interested in differences in performance, scalability, ease of use, and specific features like snapshotting and backup/restore capabilities.
 
