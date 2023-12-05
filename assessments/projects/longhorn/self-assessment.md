@@ -33,7 +33,7 @@ A table at the top for quick reference information, later used for indexing.
 | Software | [A link to the Longhorn’s repository.](https://github.com/longhorn/longhorn) |
 | Security Provider | No |
 | Languages | Python, Shell, Mustache |
-| SBOM | The information is not readily available online and we have requested for the same. We have generated the following using FOSSA:<br>* SBOM: https://app.fossa.com/attribution/dfc7fded-8ae2-4c7c-b8dc-31d6a97d1f3f<br>* 3rd-Party Software Report: https://app.fossa.com/attribution/d81c4121-aabd-422f-a2c5-f15698331432 |
+| SBOM | The information is not readily available online and we have requested for the same. In the meantime, we have generated the following using FOSSA:<br>* SBOM: https://app.fossa.com/attribution/dfc7fded-8ae2-4c7c-b8dc-31d6a97d1f3f<br>* 3rd-Party Software Report: https://app.fossa.com/attribution/d81c4121-aabd-422f-a2c5-f15698331432 |
 | | |
 
 ### Security links
