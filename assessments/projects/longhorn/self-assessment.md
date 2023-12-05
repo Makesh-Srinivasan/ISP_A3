@@ -436,4 +436,5 @@ Related Projects / Vendors
   - Are there any future plans to implement more robust audit and logging capabilities for tracking vital operations in Longhorn?
   - Backup and Disaster Recovery: While Longhorn provides backup capabilities, the security and integrity of these backups are critical, especially against ransomware attacks or data corruption. How do you handle this scenario?
   - Longhorn’s security also depends on the third-party libraries and dependencies it uses. Vulnerabilities in these components can pose a risk. How is it decided that a library would be used and adopted into Longhorn's release versus a more safer approach of waiting for longer time to ensure that the library becomes more secure to be adopted into production.
+<br>
 Based on the answers we receive to these questions, we plan to revise our attack tree and threat model. Our goal is to make them more specific and comprehensive, incorporating additional threats if identified. Following our discussion with the maintainers, we will proceed to address any potential threats that arise. We plan to address these questions in our next iteration of the self assessment documentation.
