@@ -33,7 +33,7 @@ A table at the top for quick reference information, later used for indexing.
 | Software | [A link to the Longhorn’s repository.](https://github.com/longhorn/longhorn) |
 | Security Provider | No |
 | Languages | Python, Shell, Mustache |
-| SBOM | The information is not readily available online and we have requested for the same. In the meantime, we have generated the following using FOSSA:<br>* SBOM: https://app.fossa.com/attribution/dfc7fded-8ae2-4c7c-b8dc-31d6a97d1f3f<br>* 3rd-Party Software Report: https://app.fossa.com/attribution/d81c4121-aabd-422f-a2c5-f15698331432 |
+| SBOM | The information is not readily available online and we have requested for the same |
 | | |
 
 ### Security links
@@ -382,7 +382,9 @@ Ecosystem
 * Longhorn fills the need for a reliable distributed block storage system in Kubernetes, making stateful applications and services more resilient and easier to manage in cloud-native environments.
 
 
-## Security issue resolution
+## Security issue resolution - 
+
+**Security issues resolutions** - [here](https://github.com/longhorn/longhorn/wiki/CVE-Security-Vulnerability-Resolution)
 
 Responsible Disclosures Process
 * Longhorn adopts a responsible disclosure policy, where external and internal parties are encouraged to report suspected security vulnerabilities through a predefined process. Longhorn provides some details on the [contributing guidelines](https://github.com/longhorn/longhorn/blob/master/CONTRIBUTING.md) and the [code of conduct](https://github.com/longhorn/longhorn/blob/master/CODE_OF_CONDUCT.md)
