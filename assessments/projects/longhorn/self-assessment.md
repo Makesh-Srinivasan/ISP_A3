@@ -413,7 +413,11 @@ CII Best Practices
 Case Studies
 * Case studies detailing real-world usage of Longhorn can provide valuable insights into its effectiveness and reliability.
 * Companies from different fields such as technology, finance, business services, or more that utilize the Kubernetes cluster tend to use it for secure, provision, and backup storage and more.
-* Further information can be found here: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn).
+* Further information can be found here: [Companies using Longhorn](https://discovery.hgdata.com/product/rancher-longhorn). Some are listed here:
+  - [JT4 LLC](https://www.jt4llc.com)
+  - [DgPays](https://dgpays.com/en.html)
+  - [Amdocs](http://amdocs.com/)
+
 
 Related Projects / Vendors
 * Longhorn is often compared to other CNCF projects or cloud-native storage solutions such as [Rook](https://github.com/rook/rook) and [OpenEBS](https://github.com/openebs/openebs).
