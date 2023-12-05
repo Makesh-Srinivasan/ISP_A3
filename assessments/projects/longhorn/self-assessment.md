@@ -362,7 +362,7 @@ Security-Relevant Components:
 ## Secure development practices
 
 Development Pipeline
-* Version Control and Commit Signing: Longhorn uses Git for version control. Contributors are encouraged to sign commits to verify the identity of contributors.
+* Version Control and Commit Signing: Longhorn uses Git for version control. Contributors are encouraged to sign commits to verify the identity of contributors. More details can be found in the [Getting Started with Longhorn Development](https://github.com/longhorn/longhorn/wiki/Getting-started-with-Longhorn-Development) guide.
 * Code Reviews: Each pull request requires a thorough review by at least two maintainers to ensure quality and security.
 * Continuous Integration and Deployment (CI/CD): Longhorn utilises automated CI/CD pipelines to build and test code, ensuring that tests pass before merging.
 * Container Image Security: Container images are built using trusted base images, and measures are taken to make images immutable and signed to prevent tampering.
